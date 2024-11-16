@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página para demonstração da escola"grupo3"...</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        padding-bottom: 40px; /* Adiciona espaço suficiente para o rodapé */
+        text-align: center; /* Centraliza o texto por padrão */
+    }
+
+
+    /* Estilo geral para as divs */ #home, #contato, #sobre { 
+        position: relative; 
+        width: 80%; 
+        margin: 20px auto; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        background-color: #f9f9f9; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    
+    } 
+    
+    /* Estilizando estrelas para o ID #home */ #home::before, #home::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #home::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #home::after { 
+        bottom: 10px; 
+        right: 10px; 
+    }
+    
+    /* Estilizando estrelas para o ID #contato */ #contato::before, #contato::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #contato::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #contato::after { 
+        
+        bottom: 10px; 
+        right: 10px; 
+    } 
+    
+    /* Estilizando estrelas para o ID #sobre */ #sobre::before, #sobre::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #sobre::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #sobre::after { 
+        bottom: 10px; 
+        right: 10px; }
+
+
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 1em;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px 0;
+        display: none; /* Esconde todas as seções inicialmente */
+        text-align: center; /* Centraliza o texto nas seções */
+    }
+
+    #home {
+        display: block; /* Mostra a seção home por padrão */
+        background-color: #f9f9f9; /* Cor de fundo padrão */
+    }
+
+    #contato {
+        background-color: #ffffff; /* Cor de fundo padrão */
+        text-align: left; /* Alinha à esquerda para a seção contato */
+    }
+
+    #sobre {
+        background-color: #e9ecef; /* Cor de fundo padrão */
+    }
+
+    section.active {
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .nav-buttons {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .nav-buttons button {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+        margin: 5px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-buttons .home-button {
+        background-color: #4CAF50; /* Verde */
+    }
+
+    .nav-buttons .contato-button {
+        background-color: #2196F3; /* Azul */
+    }
+
+    .nav-buttons .sobre-button {
+        background-color: #f44336; /* Vermelho */
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        max-width: 320px; /* Define um valor máximo para a largura */
+        margin: 20px auto; /* Adiciona espaçamento entre as imagens */
+        border-radius: 90px; /* Corrige a unidade de medida */
+        display: block;
+    }
+
+
+        img#imgcontato { margin-left: 0%;
+
+        }
+
+    header #img02 {
+        max-width: 110px; /* Define um valor máximo para a largura */
+        float: left;
+        background-color: #2196F3;
+        margin-left: 30px;
+    }
+    
+    
+    h4#h401 {
+        text-align: left;
+        color: rgb(59, 217, 238);
+        margin-inline: 20px;
+    }
+    
+    h1#h1principal {
+        margin-right: 100px;
+    }
+    
+    
+    h2 {
+        text-align: center;
+    }
+    h2#h2contato {
+        text-align: left;
+    }
+    h5 {
+        text-align: left;
+    }
+    p {
+        text-align: center;
+    }
+    li {
+        text-align: center; /* Centraliza o texto em listas */
+    }
+    section #proteja-se {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+    }
+
+    img#proteja-se{
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+
+
+    }
+
+
+    
+    
+    footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+   
+
+
+    button#buttonenviar{ color: black;
+                         background-color: #1eff00;
+    }
+
+    
+
+    @media (max-width: 768px) { 
+        .container { padding: 0 35px; /* Ajusta o padding lateral para telas menores */ } 
+        
+    }
+
+
+
+    .hidden-content { 
+        display: none; 
+        overflow: hidden; 
+        
+        }
+
+    input[type="checkbox"]:checked ~ .hidden-content { 
+            display: block; }
+
+
+
+            .toggle-label { 
+                cursor: pointer; 
+                color: blue; 
+                text-decoration: underline; 
+            }
+
+</style>
+
+</head>
+<body>
+    <header> 
+    
+      <a href="https://wa.me/5598982101073">
+      <img src="data:image/jpeg;base64,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" alt= "contate no whatsApp" id="img02">
+      <h4 id="h401"> link </h4></br> <h5>John Henry Oliveira Brito</h5>
+      </a>
+      </br></br><h1 id="h1principal">Bem vindos a página de demonstração</h1>
+                <h1>Navegue para a seção com um clique!</h1>
+    </header>
+  
+    
+   
+    <div class="nav-buttons">
+        <button class="home-button" onclick="mostrarSecao('home')">Home</button>
+        <button class="contato-button" onclick="mostrarSecao('contato')">Contato</button>
+        <button class="sobre-button" onclick="mostrarSecao('sobre')">Sobre</button>
+    </div>
+    <section id="home">
+        <h2>Home</h2>
+        </br>
+        <img src="proteja-se!.png" id= "proteja-se" alt="Imagem Local" width="600" height="400">
+
+        </br>
+        <h2>Essa página, foi criada para fins didáticos.</h2> </br></br></br>
+        <h2>A nossa pretenção é ensinar os usuários a </h2>
+        <h2>melhorarem a segurança de suas redes socias!</h2>
+        <p>Atualmente o trafego de informações pela Internet, apesar de sua efetividade 
+        e facilidade nas interações</p><p>entre diferentes usuários, também possúi uma ausência administrativa,
+        que é deixada à resposabilidade</p><p> do próprio usuário. Sim, se trata exatamente das senhas e etapas de segurança, </p>
+        <p>que o usuário deve implementar, para evitar, que suas redes e aplicações sejam invadidas ou hackeadas,</p>
+        <p>e seus dados sejam usados maliciosamente.</p>
+
+        </br></br></br></br>
+        
+            <img src="proteja-se!whatsapp.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+            </br></br></br>
+            <h2>1</h2>
+            </br>
+                <p></p>
+
+            <input type="checkbox" id="toggleContent" style="display: none;">
+            <label for="toggleContent" class="toggle-label">Ver mais</label>
+        
+            <div class="hidden-content">
+
+                
+                <h2>2</h2>
+            </br>
+                <p></p>
+                <h2>3</h2>
+            </br>
+                <p></p>
+
+            </div>
+        
+        
+        
+    </section>
+    <section id="contato">
+        <img src="https://tse3.mm.bing.net/th?id=OIG1.OIjc02Ldv3VVeoyZj.Fc&pid=ImgGn" alt="Minha foto" id="imgcontato"><h2 id="h2contato">Contate-nos com o seu</h2>
+        <form action="sua-url-de-destinacao" method="post">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+            <button type="submit" id="buttonenviar">Enviar</button>
+        </form>
+    </section>
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Esta é a seção sobre nós. Aqui você pode encontrar mais informações sobre nossa empresa e nossa história.</p>
+    </section>
+
+    <script>
+        function mostrarSecao(id) {
+            // Esconde todas as seções e remove a classe 'active'
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                secao.style.display = 'none';
+                secao.classList.remove('active');
+            });
+
+            // Mostra a seção selecionada e adiciona a classe 'active'
+            const secaoAtiva = document.getElementById(id);
+            secaoAtiva.style.display = 'block';
+            secaoAtiva.classList.add('active');
+        }
+    </script>
+
+
+
+    <footer>
+        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+        <a href="https://www.termsfeed.com/blog/sample-terms-service-template/" style="color: white;" target="_blank">Termos de Serviço</a> | 
+<a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" style="color: white;" target="_blank">Política de Privacidade</a>
+
+
+
+
+
+
+
+
+
+
+
+
+    </footer>
+</body>
+</html>
