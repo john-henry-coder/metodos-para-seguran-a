@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página para demonstração da escola"grupo3"...</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        padding-bottom: 40px; /* Adiciona espaço suficiente para o rodapé */
+        text-align: center; /* Centraliza o texto por padrão */
+    }
+
+
+    
+    /* Estilo geral para as divs */ #home, #contato, #sobre { 
+        position: relative; 
+        width: 80%; 
+        margin: 20px auto; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        background-color: #f9f9f9; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    
+    } 
+    
+    /* Estilizando estrelas para o ID #home */ #home::before, #home::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #home::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #home::after { 
+        bottom: 10px; 
+        right: 10px; 
+    }
+    
+    /* Estilizando estrelas para o ID #contato */ #contato::before, #contato::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #contato::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #contato::after { 
+        
+        bottom: 10px; 
+        right: 10px; 
+    } 
+    
+    /* Estilizando estrelas para o ID #sobre */ #sobre::before, #sobre::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #sobre::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #sobre::after { 
+        bottom: 10px; 
+        right: 10px; }
+
+
+
+    
+
+    section {
+        padding: 20px;
+        margin: 20px 0;
+        display: none; /* Esconde todas as seções inicialmente */
+        text-align: center; /* Centraliza o texto nas seções */
+    }
+
+    #home {
+        display: block; /* Mostra a seção home por padrão */
+        background-color: #82c793; /* Cor de fundo padrão */
+    }
+
+    #contato {
+        color: #f9f9f9;
+        background-color: #5d90be; /* Cor de fundo padrão */
+        
+    }
+ 
+    #sobre {
+        background-color: #c5d859; /* Cor de fundo padrão */
+    }
+
+    section.active {
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .nav-buttons {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .nav-buttons button {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+        margin: 5px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-buttons .home-button {
+        background-color: #4CAF50; /* Verde */
+    }
+
+    .nav-buttons .contato-button {
+        background-color: #2196F3; /* Azul */
+    }
+
+    .nav-buttons .sobre-button {
+        background-color: #da9a5f; /* Vermelho */
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        max-width: 320px; /* Define um valor máximo para a largura */
+        margin: 20px auto; /* Adiciona espaçamento entre as imagens */
+        border-radius: 90px; /* Corrige a unidade de medida */
+        display: block;
+    }
+
+
+        
+
+    header #img02 {
+        max-width: 110px; /* Define um valor máximo para a largura */
+        float: left;
+        background-color: #2196F3;
+        
+        margin-right: 100%;
+    }
+    
+    
+    
+    
+    
+    
+    h1#h1principal {
+        text-align: center;
+        margin-left: 5%;
+    }
+    
+    
+    h2 {
+        text-align: center;
+    }
+    
+    
+    h5 {
+        text-align: left;
+    }
+    p {
+        text-align: center;
+    }
+    li {
+        text-align: center; /* Centraliza o texto em listas */
+    }
+    section #proteja-se {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+    }
+
+    img#proteja-se{
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+
+
+    }
+
+
+    
+    
+    footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+   
+
+    
+
+    @media (max-width: 768px) { 
+        .container { padding: 0 35px; /* Ajusta o padding lateral para telas menores */ } 
+        
+    }
+
+
+
+    
+
+            a#idformula { float: right,top;
+                        margin-top: 200px;
+                
+                         
+            }
+
+
+
+
+
+
+    p#p0001 { color:rgb(134, 211, 134)
+
+    }
+    p#p0002 { color:rgb(193, 231, 231)
+
+    }
+
+
+/* Estilos do cabeçalho */ 
+    header { 
+        background-color: #a5b89c; 
+        padding: 10px 20px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        border-bottom: 1px solid #110707; }
+
+    /* Estilos do botão de hambúrguer */ 
+    .hamburger-menu { display: inline-block; cursor: pointer; } 
+    
+    .hamburger-bar { width: 35px; height: 5px; background-color: #333; margin: 6px 0; transition: 0.4s; } 
+    /* Estilos do menu */ 
+    
+    .hamburger-options { 
+        display: none; 
+        position: absolute; top: 60px; 
+    /* Ajuste conforme necessário */ 
+        right: 60px; 
+    /* Ajuste conforme necessário */ 
+        background-color: #fff; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        border-radius: 4px; 
+        overflow: hidden; 
+        z-index: 1000; } 
+        
+    .hamburger-options a { 
+        display: block; 
+        padding: 10px; 
+        background-color: #f1f1f1; 
+        margin: 0; text-decoration: none; 
+        color: #333; } .hamburger-options a:hover { 
+        background-color: #ddd; }
+
+
+    
+
+</style>
+
+</head>
+<body>
+    <!-- Cabeçalho --> 
+    <header> 
+         <!-- Logo ou título --> 
+         <div class="logo"> <h1>Meu Site</h1> </div> 
+         <!-- Botão de hambúrguer --> 
+        <div class="hamburger-menu" onclick="toggleMenu()"> 
+        <div class="hamburger-bar"></div> 
+        <div class="hamburger-bar"></div> 
+        <div class="hamburger-bar"></div> 
+        </div>
+    </header> 
+    <header>
+            
+        <a href="https://wa.me/5598982101073"></br> 
+        <img src="data:image/jpeg;base64,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" alt= "contate no whatsApp" id="img02">
+        </br> <h5>John Henry Oliveira Brito</h5>
+        
+        </a>
+        
+      <h1 id="h1principal">Bem vindos a página de demonstração</br></br></br>
+                Navegue para a seção com um clique!</h1>
+        <a href="https://go.hotmart.com/X68520780S?dp=1" id="idformula">Clique aqui para a Fórmula online </a>
+
+    </header> 
+    
+    <!-- Menu --> 
+    <div class="hamburger-options" id="hamburger-options"> 
+    <a href="https://www.exemplo1.com" target="_blank">Opção 1</a> 
+    <a href="https://www.exemplo2.com" target="_blank">Opção 2</a> 
+    <a href="https://www.exemplo3.com" target="_blank">Opção 3</a> 
+    </div> 
+    <script> 
+    function toggleMenu() { 
+        var menu = document.getElementById('hamburger-options'); 
+        if (menu.style.display === 'block') { 
+            menu.style.display = 'none'; } else { 
+            menu.style.display = 'block'; } 
+        
+        } 
+    </script>
+    
+  
+
+    <div class="nav-buttons">
+        <button class="home-button" onclick="mostrarSecao('home')">WhatsApp</button>
+        <button class="contato-button" onclick="mostrarSecao('contato')">Facebook</button>
+        <button class="sobre-button" onclick="mostrarSecao('sobre')">Instagram</button>
+    
+    </div>
+    
+        
+
+        
+        
+    <section id="home">
+        
+         
+            
+
+        <h2>Guia de Segurança Para o WhatsApp</h2>
+        </br></br></br>
+        <img src="proteja-se!.png" id= "proteja-se" alt="Imagem Local" width="600" height="400">
+
+        </br>
+        <h2>Essa página, foi criada para fins didáticos.</h2> </br></br></br>
+        <h2>A nossa pretenção é ensinar os usuários a </h2>
+        <h2>melhorarem a segurança de suas redes socias!</h2>
+        <p>Atualmente o trafego de informações pela Internet, apesar de sua efetividade 
+        e facilidade nas interações</p><p>entre diferentes usuários, também possúi uma ausência administrativa,
+        que é deixada à resposabilidade</p><p> do próprio usuário. Sim, se trata exatamente das senhas e etapas de segurança, </p>
+        <p>que o usuário deve implementar, para evitar, que suas redes e aplicações sejam invadidas ou hackeadas,</p>
+        <p>e seus dados sejam usados maliciosamente.</p>
+
+        </br></br></br></br>
+        <h1>Primeiro Tutorial: <strong>Verificação em Dois Fatores 2(FA).</strong></h1>
+            </br></br></br>
+            <img src="proteja-se!whatsapp.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+            </br></br></br>
+                
+                <h2>1º Passo: Acessar as configurações</h2>
+            </br>
+                <p>entre no aplicativo WhatsApp, clique nos três pontinhos, no canto superior direito no menu inicial.</p>
+                <p>Selecione a opção <strong>configurações.</strong></p>
+            <img src="etapa1whatsapp.png" id="proteja-se" alt="primeiro passo"  width="600" height="400">
+
+            
+            </br></br>
+            <div>
+
+            </br></br></br>
+                <h2>2º Passo:Acesse o menu da <strong>conta</strong></h2>
+            </br>
+                <p>No menu de configurações, selecione a opção <strong>Conta.</strong></p>
+            <img src="etapa2whatsapp.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+            </br></br></br>
+                <h2>3º Passo: Acessar <strong>Confirmação em duas etapas</strong></h2>
+            </br>
+                <p>No menu da Conta vá até <strong>Confirmação em duas etapas.</strong></p>
+            <img src="etapa3whatsapp.jpg" id="proteja-se" alt="terceiro passo" width="600" height="400">
+            </br></br></br>
+                <h2>4º Passo:</h2>
+            </br>
+                <p>Aperte o botão verde <strong>ativar</strong>, na parte central inferior da tela.</p>
+            <img src="etapa4whatsapp.jpg" id="proteja-se" alt="quarto passo" width="600" height="400">
+            </br></br></br></br></br>
+            <h1>5º Passo: Última Etapa da <strong>Verificação em Duas Etapas</strong> no <strong>WhatsApp</strong></h1>
+            </br></br>
+            <h3>Confirme seu <strong>Código de Acesso</strong>:</h3>
+            <p>Após configurar o <strong>código de acesso de seis dígitos,</strong></p>
+            <p>você será solicitado a inseri-lo novamente para <strong>confirmação.</strong></p>
+            </br></br>
+            <h3>Adicione um Email de Recuperação (<strong>Opcional</strong>):</h3>
+            <p><strong>WhatsApp</strong> solicitará um <strong>endereço de email opcional</strong>.</p>
+            <p>Esse <strong>email</strong> pode ser usado para redefinir seu <strong>código de acesso</strong> caso você o esqueça.</p>
+            <p>Você pode <strong>adicionar um email</strong> ou <strong>pular</strong> essa etapa, </p>
+            <p>mas é <strong>altamente recomendado</strong> para <strong>maior segurança</strong>.</p>
+            </br></br>
+            <h3>Conclusão</h3>
+            <p>Após a <strong>confirmação</strong> do <strong>código de acesso</strong> e a adição do <strong>email</strong> (se aplicável),</p> 
+            <p>a verificação em duas etapas estará ativada.</p>
+        
+        
+            </div>
+    
+
+
+        </br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+    
+           
+            <div>
+                
+            <h1>Segundo Tutorial: Usar um <strong>Gerenciador de Senhas</strong>.</h1>
+            </br></br></br>
+            <img src="proteja-se!bitwarden.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+        </br></br></br>
+        <h2>1º Passo: <strong>Baixar e Instalar o Bitwarden</strong></h2>
+        </br></br></br>
+            <p>
+            <strong>iOS</strong>: Acesse a <strong>App Store</strong>, procure por "Bitwarden" e baixe o aplicativo.<br>
+            <strong>Android</strong>: Acesse a <strong>Google Play Store</strong>, procure por "Bitwarden" e baixe o aplicativo.
+            </p>
+        </br></br></br>
+            <img src="proteja-se!bitwardenbaixar.jpg" id="proteja-se" alt="1passo" width="600" height="400">
+        </br></br></br>
+            
+            <h2>2º Passo: Criar uma Conta</h2>
+        </br></br></br>
+            <p>
+            <strong>Abra o aplicativo</strong> e toque em "Criar Conta".</br></br>
+            <strong>Insira seu e-mail</strong> e crie uma senha mestre forte.</br></br>
+            <strong>Confirme seu e-mail</strong> através de um link enviado por e-mail.
+            </p>
+        </br></br></br>
+
+            <h2>3º passo: Adicionar Senhas</h2>
+        </br></br></br>
+            <p>
+            <strong>Adicionar Manualmente</strong>: Toque em <strong>Adicionar Item</strong> e insira suas senhas manualmente.</br></br>
+            <strong>Importar Senhas</strong>: Vá para <strong>Configurações</strong> &gt; <strong>Ferramentas</strong> &gt; <strong>Importar Dados</strong> </br></br>para importar senhas de outros <strong>gerenciadores de senhas</strong> ou<strong> navegadores</strong>.
+            </p>
+        </br></br></br>
+
+            <h2>4º Passo: Usar o Preenchimento Automático</h2>
+        </br></br></br>
+            <p>
+            <strong>Habilitar Preenchimento Automático</strong>: Vá para <strong>Configurações</strong> do seu dispositivo,</br></br>selecione <strong>Preenchimento Automático</strong> e escolha o <strong>Bitwarden</strong> como seu <strong>gerenciador de preenchimento automático</strong>.</br></br>
+            <strong>Testar</strong>: Ao acessar um site ou aplicativo, o Bitwarden deve oferecer a opção de preencher automaticamente</br></br> suas credenciais.
+            </p>
+        </br></br></br>
+
+            <h2>5º Passo: Configurar a Autenticação de Dois Fatores (2FA)</h2>
+        </br></br></br>
+            <p>
+            <strong>Adicionar Autenticação de Dois Fatores</strong>: No <strong>Bitwarden</strong>, vá para <strong>Configurações</strong> &gt; <strong>Ferramentas</strong> &gt; <strong>Autenticação de Dois Fatores</strong>.</br></br>
+            <strong>Escolha um Método</strong>: Você pode usar aplicativos como <strong>Google Authenticator</strong> ou <strong>Authy</strong>.</br></br>
+            <strong>Adicionar Conta</strong>: Escaneie o <strong>código QR</strong> fornecido pela sua conta e adicione a <strong>autenticação de dois fatores</strong> ao <strong>Bitwarden</strong>.
+            </p>
+        </br></br></br>
+
+            <h2>6º Passo: Adicionar Notas Seguras</h2>
+        </br></br></br>
+            <p>
+            <strong>Adicionar Nota Segura</strong>: Toque em <strong>Adicionar Item</strong> e selecione <strong>Nota Segura</strong>.</br></br>Insira informações sensíveis como números de segurança e senhas importantes.
+            </p>
+        </br></br></br>
+
+            <h2>7º Passo: Configurar Acesso de Emergência</h2>
+        </br></br></br>
+            <p>
+            <strong>Acesso de Emergência</strong>: Vá para <strong>Configurações</strong> &gt; <strong>Segurança</strong> &gt; <strong>Acesso de Emergência</strong> e</br></br>configure contatos de confiança que possam acessar suas senhas em caso de emergência.
+            </p>
+        </br></br></br>
+
+            <h2>8º Passo: Sincronizar entre Dispositivos</h2>
+        </br></br></br>
+            <p>
+            <strong>Sincronização</strong>: O Bitwarden sincroniza automaticamente suas senhas entre dispositivos, </br></br>garantindo que você tenha acesso às suas senhas em qualquer lugar.
+            </p>
+        </br></br></br>
+
+            <h2>9º Passo: Manter Atualizado</h2>
+        </br></br></br>
+            <p>
+            <strong>Atualizações</strong>: Mantenha o aplicativo sempre atualizado para garantir que você tenha as últimas melhorias de segurança.
+            </p>
+        </br></br></br>
+
+
+                
+
+            </div>
+    
+    </section>
+        
+        
+        
+    
+    <section id="contato">
+        <h2>Guia de Segurança Para o Facebook</h2>
+    </br></br></br>
+        <img src="proteja-se!facebook.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>Veja como é fácil configurar a autenticação de dois</br></br>fatores no Facebook.
+            Para ativar ou gerenciar a </br></br>autenticação de dois fatores, você deve:
+        </h2>
+    </br></br></br></br></br>
+        <h2>1º Passo</h2>
+    </br></br>
+        <p>Clicar na seta para baixo no canto superior direito do Facebook e ir em Configurações.</p>
+    </br></br></br>
+        <img src="imagemfacebook1.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>2º Passo</h2>
+    </br></br>
+        <p>Segurança e login, para acessar as Configurações de segurança e login da sua conta.</p>
+    </br></br></br>
+        <img src="imagemfacebook2.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>3º Passo</h2>
+    </br></br>
+        <p>Rolar a tela para baixo até Usar autenticação de dois fatores e clicar em Editar.</p>
+    </br></br></br>
+        <img src="imagemfacebook3.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>4º Passo</h2>
+    </br></br>
+        <p>Clicar em Ativar depois de ter selecionado e configurado um método de autenticação.</p>
+    </br></br></br>
+        <h2>5º Passo: Você pode escolher entre dois métodos de autenticação de dois fatores</br></br> para usar quando entrar em sua conta do Facebook usando um computador</br></br>
+             ou dispositivo móvel não reconhecido:
+        </h2>
+    </br></br>
+        <p id="p0001">- Códigos de SMS no seu celular</p></br></br>
+
+        <p id="p0002">- Códigos de login de um aplicativo de autenticação de terceiros.
+            </p>
+
+    </br></br></br>
+        <img src="imagemfacebook4.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>É necessário configurar pelo menos uma dessas opções para</br></br>
+             usar a autenticação de dois fatores e garantir mais segurança</br></br>
+             aos seus acessos.
+        </h2>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section id="sobre">
+
+        <h2>Guia de Segurança para o Instagram</h2>
+    </br></br></br>
+        <img src="proteja-se!instagram.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>1º Passo Abra o Instagram:</h2>
+    </br></br></br>
+        <p>Vá para o seu perfil e toque no menu de três linhas no canto superior direito</p>
+    </br></br></br>
+        <img src="imageminstagram1.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>2º Passo Acesse as Configurações e atividades:</h2>
+    </br></br></br>
+        <p> Toque em <strong>configuração e atividades</strong>. </br></br>Em seguida, toque em <strong>"Central de Contas"</strong>. </p>
+    </br></br></br>
+        <img src="imageminstagram2.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>3º Passo Vá para <strong>Senha e segurança</strong>:</h2>
+    </br></br></br>
+        <p>Dentro da <strong>Central de Contas</strong> vá para <strong> Senha e segurança</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram3.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>4º Passo Ativar a <strong>Autenticação de Dois Fatores</strong></h2>
+    </br></br></br>
+        <p>Toque em <strong>Autenticação de Dois Fatores</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram4.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        
+        <h2>5º Passo Escolher o Método de Autenticação</h2>
+    </br></br></br>
+        <p>Você verá opções para ativar a autenticação de dois fatores</br></br>
+         por <strong>SMS</strong> e <strong>Aplicativo de Autenticação</strong>. Escolha <strong>"SMS"</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram5.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>6º Passo Inserir o Número de Telefone</h2>
+    </br></br></br>
+        <p>Digite o número de telefone associado à sua conta do Instagram e toque em <strong>"Avançar"</strong>.</p>
+    </br></br></br>
+        <h2>7º Passo Confirmar o Código</h2>
+    </br></br></br>
+        <p>Você receberá um código por SMS. Digite esse código no Instagram para</br></br>confirmar a ativação da autenticação de dois fatores.</p>
+    </br></br></br>
+        <h2>8º Passo Salvar os Códigos de Reserva</h2>
+    </br></br></br>
+        <p>O Instagram fornecerá alguns códigos de reserva. Guarde esses códigos em um lugar seguro.</br></br>Eles podem ser usados para acessar sua conta caso você perca acesso ao seu telefone.</p>
+    </br></br></br>
+    </br></br></br>
+
+
+        <h2><strong>Dicas Extras</strong></h2>
+    </br></br></br>
+        <p> <strong>1.Não clique em links suspeitos ou des conhecidos</strong>
+    </br></br>
+        <strong>2.Não baixe arquivos de fontes desconhecidas</strong>
+    </br></br>
+        <strong>3.Verifique a autenticidade de mensagens e comentários</strong></p>
+
+
+
+
+
+
+   </section>
+
+    <script>
+        function mostrarSecao(id) {
+            // Esconde todas as seções e remove a classe 'active'
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                secao.style.display = 'none';
+                secao.classList.remove('active');
+                });
+
+            // Mostra a seção selecionada e adiciona a classe 'active'
+            const secaoAtiva = document.getElementById(id);
+            secaoAtiva.style.display = 'block';
+            secaoAtiva.classList.add('active');
+                }
+    
+        
+
+                
+    </script>
+
+
+
+    <footer>
+        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+        <a href="https://www.termsfeed.com/blog/sample-terms-service-template/" style="color: white;" target="_blank">Termos de Serviço</a> | 
+        <a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" style="color: white;" target="_blank">Política de Privacidade</a>
+
+
+
+
+
+
+
+
+
+
+
+
+    </footer>
+</body>
+</html>
