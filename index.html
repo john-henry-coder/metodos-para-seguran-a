@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página para demonstração da escola Turma: 100...</title>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 0;
+        padding-bottom: 40px; /* Adiciona espaço suficiente para o rodapé */
+        text-align: center; /* Centraliza o texto por padrão */
+    }
+
+
+     
+    /* Estilo geral para as divs */ #home, #contato, #sobre, #início { 
+        position: relative; 
+        width: 80%; 
+        margin: 20px auto; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        background-color: #f9f9f9; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    
+    } 
+    
+    /* Estilizando estrelas para o ID #home */ #início::before, #início::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #início::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #início::after { 
+        bottom: 10px; 
+        right: 10px; 
+    }
+
+
+
+
+
+    /* Estilizando estrelas para o ID #home */ #home::before, #home::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #home::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #home::after { 
+        bottom: 10px; 
+        right: 10px; 
+    }
+    
+    /* Estilizando estrelas para o ID #contato */ #contato::before, #contato::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #contato::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #contato::after { 
+        
+        bottom: 10px; 
+        right: 10px; 
+    } 
+    
+    /* Estilizando estrelas para o ID #sobre */ #sobre::before, #sobre::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; height: 0; 
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 50px solid rgba(255, 215, 0, 0.7); 
+        transform: rotate(35deg); 
+    } 
+    
+    #sobre::before { 
+        top: 10px; 
+        left: 10px; 
+    } 
+    
+    #sobre::after { 
+        bottom: 10px; 
+        right: 10px; }
+
+
+
+    
+    
+    section {
+        padding: 20px;
+        margin: 20px 0;
+        display: none; /* Esconde todas as seções inicialmente */
+        text-align: center; /* Centraliza o texto nas seções */
+    }
+
+    #início {
+        display: block; /* Mostra a seção início por padrão */
+        background-color: #d6ac9f; /* Cor de fundo padrão */
+    }
+
+    #home {
+        
+        background-color: #82c793; /* Cor de fundo padrão */
+    }
+
+    #contato {
+        color: #f9f9f9;
+        background-color: #5d90be; /* Cor de fundo padrão */
+        
+    }
+ 
+    #sobre {
+        background-color: #c5d859; /* Cor de fundo padrão */
+    }
+
+    section.active {
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 8px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .nav-buttons {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .nav-buttons button {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+        margin: 5px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-buttons .home-button {
+        background-color: #4CAF50; /* Verde */
+    }
+
+    .nav-buttons .contato-button {
+        background-color: #2196F3; /* Azul */
+    }
+
+    .nav-buttons .sobre-button {
+        background-color: #da9a5f; /* Vermelho */
+    }
+
+    .nav-buttons .começo-button {
+        background-color: #e74210; /* Vermelho */
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    img {
+        max-width: 320px; /* Define um valor máximo para a largura */
+        margin: 20px auto; /* Adiciona espaçamento entre as imagens */
+        border-radius: 90px; /* Corrige a unidade de medida */
+        display: block;
+    }
+
+
+        
+
+    header #img02 {
+        max-width: 110px; /* Define um valor máximo para a largura */
+        float: left;
+        background-color: #2196F3;
+        
+        margin-right: 100%;
+    }
+    
+    
+    
+    
+    
+    
+    h1#h1principal {
+        margin-left: 28%;
+        margin-block-start: 80px;
+        font-size: 3rem;
+        text-align: center;
+        
+        
+    }
+    
+    
+    h2 {
+        text-align: center;
+        font-size: 35px;
+        
+    }
+    
+    
+    h5 {
+        text-align: left;
+        font-size: 35px;
+        
+    }
+    p {
+        text-align: center;
+        font-size: 27px;
+    }
+    li {
+        text-align: center; /* Centraliza o texto em listas */
+    }
+    section #proteja-se {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+    }
+
+    img#proteja-se{
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 0;
+
+
+    }
+
+
+    
+    
+    footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 1px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0px;
+    }
+
+   
+
+    
+
+    @media (max-width: 768px) { 
+        .container { padding: 0 35px; /* Ajusta o padding lateral para telas menores */ } 
+        
+    }
+
+
+
+    
+
+
+
+
+
+
+
+    p#p0001 { color:rgb(134, 211, 134)
+
+    }
+    p#p0002 { color:rgb(193, 231, 231)
+
+    }
+    p#prodapé{
+        font-size: 20px;
+    }
+   
+
+
+/* Estilos do cabeçalho */ 
+    header { 
+        background-color: #a5b89c; 
+        padding: 10px 20px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        border-bottom: 1px solid #110707;
+    }
+
+
+    /* Estilos do botão de hambúrguer */ 
+    .hamburger-menu { 
+        display: inline-block; 
+        cursor: pointer; } 
+    
+    .hamburger-bar { 
+        width: 35px; 
+        height: 5px; 
+        background-color: #333; 
+        margin: 6px 0; 
+        transition: 0.4s; } 
+    /* Estilos do menu */ 
+    
+    .hamburger-options { 
+        display: none; 
+        position: absolute; 
+        top: 60px; 
+    /* Ajuste conforme necessário */ 
+        right: 60px; 
+    /* Ajuste conforme necessário */ 
+        background-color: #fff; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        border-radius: 4px; 
+        overflow: hidden; 
+        z-index: 1000; } 
+        
+    .hamburger-options a { 
+        display: block; 
+        padding: 10px; 
+        background-color: #f1f1f1; 
+        margin: 0; text-decoration: none; 
+        color: #333; } .hamburger-options a:hover { 
+        background-color: #ddd; }
+
+
+    
+        .hand-icon { font-size: 35px; color: #333; }
+
+        h2#r1 { color: rgb(85, 17, 17);
+
+        }
+        h2#r2 { color: rgb(85, 17, 17);
+
+        }
+        h2#r3 { color: rgb(85, 17, 17);
+
+        }
+        h1#introo{
+            font-size: 40px;
+        }
+
+        .more-text { display: none; 
+        }
+        .more-text2 { display: none;
+
+        }
+        .more-text3 { display: none;
+
+        }
+        
+
+        
+        button#myBtn{
+            padding: 5px 10px;
+            border-color: #da9a5f;
+            background-color: #ad8174;
+            cursor: pointer; 
+            transition: opacity 0.3s ease; /* Transição suave */
+            font-size: 16px;
+           
+        }
+        /* Alterar opacidade ao passar o cursor */ 
+        .button#myBtn:hover { opacity: 0.8; }
+
+
+
+        button#myBtn2{
+            padding: 5px 10px;
+            border-color: #da9a5f;
+            background-color: #ad8174;
+            cursor: pointer; 
+            transition: opacity 0.3s ease; /* Transição suave */
+            font-size: 16px;
+        }
+        /* Alterar opacidade ao passar o cursor */ 
+        .button#myBtn2:hover { opacity: 0.8; }
+
+
+        button#myBtn3{
+            padding: 5px 10px;
+            border-color: #da9a5f;
+            background-color: #ad8174;
+            cursor: pointer; 
+            transition: opacity 0.3s ease; /* Transição suave */
+            font-size: 16px;
+        }
+        /* Alterar opacidade ao passar o cursor */ 
+        .button#myBtn3:hover { opacity: 0.8; }
+
+        
+</style>
+
+</head>
+<body>
+    <!-- Cabeçalho --> 
+    <header> 
+         <!-- Logo ou título --> 
+         <div class="logo"> <h1>Dicas de Segurança.</h1> </div> 
+         <!-- Botão de hambúrguer --> 
+        <div class="hamburger-menu" onclick="toggleMenu()"> 
+        <div class="hamburger-bar"></div> 
+        <div class="hamburger-bar"></div> 
+        <div class="hamburger-bar"></div> 
+        </div>
+    </header> 
+    <header>
+    
+
+    
+        
+      <h1 id="h1principal">Cartilha Digital Turma: 100</h1>
+        
+    </header> 
+    
+    <!-- Menu --> 
+    <div class="hamburger-options" id="hamburger-options"> 
+    <a href="https://www.whatsapp.com/legal/terms-of-service" target="_blank">Termos de serviço do WhatsApp</a> 
+    <a href="https://www.facebook.com/legal/terms" target="_blank">Termos de serviço do Facebook</a> 
+    <a href="https://help.instagram.com/581066165581870/?helpref=uf_share" target="_blank">Termos de Uso do Instagram</a> 
+    </div> 
+    <script> 
+    function toggleMenu() { 
+        var menu = document.getElementById('hamburger-options'); 
+        if (menu.style.display === 'block') { 
+            menu.style.display = 'none'; } else { 
+            menu.style.display = 'block'; } 
+        
+        } 
+        
+    </script>
+    
+  
+
+    <div class="nav-buttons">
+        <button class="começo-button" onclick="mostrarSecao('início')">Início</button>
+        <button class="home-button" onclick="mostrarSecao('home')">WhatsApp</button>
+        <button class="contato-button" onclick="mostrarSecao('contato')">Facebook</button>
+        <button class="sobre-button" onclick="mostrarSecao('sobre')">Instagram</button>
+        
+    </div>
+    
+    <section id="início">
+
+       <img src="proteja-se!.png" id= "proteja-se" alt="Imagem Local" width="600" height="400">
+            <h1 id="introo">Introdução</h1>
+        </br>
+        <h2>Essa página, foi criada para fins didáticos.</h2> 
+        <h2>A nossa pretenção é ensinar os usuários a </h2>
+        <h2>melhorarem a segurança de suas redes socias!</h2>
+        </br></br>
+        <p>No mundo digital em constante evolução, a segurança online tornou-se uma preocupação crescente para todos os usuários da internet.
+            Golpes maliciosos cibernéticos estão se tornando cada vez mais sofisticados, visando roubar informações pessoais, financeiras e até mesmo identidades.
+            Nesta introdução, abordaremos três dos golpes cibernéticos mais comuns: roubo de contas, bots e contas falsas, e clonagem de perfil.
+            Esses golpes podem ter consequências devastadoras para os usuários, que podem ter seus dados roubados ou usados indevidamente.</p>
+        </br></br></br>
+            <h2 id="r1">1º Roubo de Contas</h2>
+            <p> 
+            <span class="dots">&#128071;...</span> 
+            <span class="more-text">O roubo de contas é um dos golpes cibernéticos mais frequentes. 
+                Isso ocorre quando um hacker obtém acesso não autorizado às contas de usuários, seja por meio de phishing, malware ou senhas fracas.  
+                Uma vez dentro da conta, o atacante pode roubar informações pessoais, fazer compras não autorizadas e até mesmo extorquir a vítima.  
+                A proteção de suas contas online com senhas fortes e a ativação da autenticação de dois fatores são medidas essenciais para prevenir esse tipo de ataque.
+            </br></br></br></br></br></br></br></br>
+                <strong>Dicas de Prevenção</br></br></br></br>
+                1º  - Use senhas fortes e únicas para cada conta.
+            </br></br></br>
+                2º  - Ative a autenticação de dois fatores (2FA).
+
+            </br></br></br>
+                3º  - Evite clicar em links suspeitos e nunca</br>
+                forneça informações pessoais em respostas a 
+                e-mails ou mensagens não solicitadas.
+
+            </br></br></br>
+                4º  - Mantenha seu software e antivírus atualizados.
+
+            </br></br></br>
+                </strong>
+        
+            </span> 
+            </p>
+            
+            <button onclick="toggleText()" id="myBtn">Ver Conteúdo</button>
+        </br></br></br></br>
+
+            <h2 id="r2">2º Bots e Contas Falsas</h2>
+            <p> 
+                <span class="dots2">&#128071;...</span> 
+                <span class="more-text2">Bots e contas falsas são criados para enganar os usuários e podem ser usados para uma variedade de fins maliciosos, 
+                    como espalhar desinformação, executar fraudes ou coletar dados pessoais. Bots são programas automatizados que podem interagir com
+                    usuários reais em redes sociais e outras plataformas online. Contas falsas, por outro lado, são perfis criados para se passar por indivíduos reais, muitas vezes para ganhar a confiança de outros usuários antes de realizar atividades fraudulentas.
+                </br></br></br></br></br></br></br></br>
+                <strong>Dicas de Prevenção</br></br></br></br>
+                1º  - Verifique o perfil antes de interagir: procure sinais de que pode ser falso,</br>
+                 como falta de atividade ou informações inconsistentes.      
+                </br></br></br>    
+                2º  - Use ferramentas de verificação de contas e relatórios em redes sociais.
+                </br></br></br>
+                3º  - Não forneça informações pessoais a contatos desconhecidos ou não verificados.
+        
+                </br></br></br>
+                4º  - Desconfie de mensagens ou solicitações não solicitadas que parecem urgentes ou emocionais.
+        
+                </br></br></br>
+                </strong>       
+
+
+                </span> 
+                </p>
+                <button onclick="toggleText2()" id="myBtn2">Ver Conteúdo</button>
+            </br></br></br></br>
+
+            <h2 id="r3">3º Clonagem de Perfil</h2>
+            <p> 
+                <span class="dots3">&#128071;...</span> 
+                <span class="more-text3">A clonagem de perfil envolve a criação de um perfil falso que imita um perfil real, geralmente com o objetivo de enganar amigos e seguidores do usuário original. Os golpistas copiam informações, fotos e postagens para fazer o perfil parecer autêntico. Eles então usam o perfil clonado para pedir dinheiro ou informações pessoais aos contatos da vítima. É crucial estar atento a pedidos suspeitos e verificar a autenticidade dos perfis antes de compartilhar qualquer informação sensível.
+                </br></br></br></br></br></br></br></br>
+                <strong>Dicas de Prevenção</br></br></br></br>
+                1º  - Proteja suas informações pessoais e evite compartilhar dados sensíveis publicamente.   
+                </br></br></br>    
+                2º  - Monitore regularmente seus perfis de redes sociais para identificar qualquer atividade suspeita.
+                </br></br></br>
+                3º  - Altere suas configurações de privacidade para limitar o acesso a suas informações.
+        
+                </br></br></br>
+                4º  - Notifique seus contatos caso perceba que seu perfil foi clonado e reporte à plataforma imediatamente.
+        
+                </br></br></br>
+                </strong>    
+                </span> 
+                </p>
+                <button onclick="toggleText3()" id="myBtn3">Ver Conteúdo</button>
+        </br></br></br>
+        </br></br></br>
+        </br></br></br></br></br>
+
+
+        <h2>Dissertação sobre Golpes Maliciosos Cibernéticos</h2> 
+       
+        </br></br></br>
+        <p>Os golpes maliciosos cibernéticos são uma ameaça crescente que pode causar sérios danos aos usuários. A perda de informações pessoais e financeiras, a usurpação de identidade e a exposição a fraudes são apenas algumas das consequências desses ataques. A conscientização sobre esses riscos e a implementação de práticas de segurança, como o uso de senhas fortes, a ativação de autenticação de dois fatores e a verificação de perfis suspeitos, são essenciais para proteger os usuários contra essas ameaças.
+            Ao entender a natureza desses golpes e como eles operam, os usuários podem tomar medidas proativas para se proteger e minimizar os riscos de cair em armadilhas cibernéticas. A prevenção é a melhor defesa contra os perigos do mundo digital.</p>
+        
+        
+    
+        
+    </section>
+
+    <script>
+        function toggleText() {
+            var dots = document.querySelector('.dots'); 
+            var moreText = document.querySelector('.more-text'); 
+            var btnText = document.getElementById('myBtn');
+            
+            
+            
+            
+            if (dots.style.display === "none") { 
+                dots.style.display = "inline"; 
+                btnText.innerHTML = "Ver Conteúdo"; 
+                moreText.style.display = "none";
+                
+              
+                
+                
+
+
+            } else { 
+                dots.style.display = "none"; 
+                btnText.innerHTML = "Ocultar Conteúdo"; 
+                moreText.style.display = "inline";
+                
+
+               
+
+            }
+        }
+            function toggleText2(){
+                var dots = document.querySelector('.dots2'); 
+            var moreText = document.querySelector('.more-text2'); 
+            var btnText = document.getElementById('myBtn2');
+
+
+
+
+            if (dots.style.display === "none") { 
+                dots.style.display = "inline"; 
+                btnText.innerHTML = "Ver Conteúdo"; 
+                moreText.style.display = "none";
+                
+            
+
+        } else { 
+                dots.style.display = "none"; 
+                btnText.innerHTML = "Ocultar Conteúdo"; 
+                moreText.style.display = "inline";
+        }}
+
+
+        function toggleText3(){
+                var dots = document.querySelector('.dots3'); 
+            var moreText = document.querySelector('.more-text3'); 
+            var btnText = document.getElementById('myBtn3');
+
+
+
+
+            if (dots.style.display === "none") { 
+                dots.style.display = "inline"; 
+                btnText.innerHTML = "Ver Conteúdo"; 
+                moreText.style.display = "none";
+                
+            
+
+        } else { 
+                dots.style.display = "none"; 
+                btnText.innerHTML = "Ocultar Conteúdo"; 
+                moreText.style.display = "inline";
+        }}
+
+    </script>
+        
+    <section id="home">
+        
+         
+            
+
+        <h2>Guia de Segurança Para o WhatsApp</h2>
+        </br></br></br>
+        
+
+        
+            
+            <img src="proteja-se!whatsapp.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+            </br></br></br>
+                
+                <h2>1º Passo: Acessar as configurações</h2>
+            </br>
+                <p>Entre no aplicativo WhatsApp, clique nos três pontinhos, no canto superior direito no menu inicial.</p>
+                <p>Selecione a opção <strong>configurações.</strong></p>
+            <img src="etapa1whatsapp.png" id="proteja-se" alt="primeiro passo"  width="600" height="400">
+
+            
+            </br></br>
+            <div>
+
+            </br></br></br>
+                <h2>2º Passo:Acesse o menu da <strong>conta</strong></h2>
+            </br>
+                <p>No menu de configurações, selecione a opção <strong>Conta.</strong></p>
+            <img src="etapa2whatsapp.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+            </br></br></br>
+                <h2>3º Passo: Acessar <strong>Confirmação em duas etapas</strong></h2>
+            </br>
+                <p>No menu da Conta vá até <strong>Confirmação em duas etapas.</strong></p>
+            <img src="etapa3whatsapp.jpg" id="proteja-se" alt="terceiro passo" width="600" height="400">
+            </br></br></br>
+                <h2>4º Passo:</h2>
+            </br>
+                <p>Aperte o botão verde <strong>ativar</strong>, na parte central inferior da tela.</p>
+            <img src="etapa4whatsapp.jpg" id="proteja-se" alt="quarto passo" width="600" height="400">
+            </br></br></br></br></br>
+            <h2>5º Passo: Última Etapa da <strong>Verificação em Duas Etapas</strong> no <strong>WhatsApp</strong></h1>
+            </br></br>
+            <h2>Confirme seu <strong>Código de Acesso</strong>:</h2>
+            <p>Após configurar o <strong>código de acesso de seis dígitos,</strong></p>
+            <p>você será solicitado a inseri-lo novamente para <strong>confirmação.</strong></p>
+            </br></br>
+            <h2>Adicione um Email de Recuperação (<strong>Opcional</strong>):</h2>
+            <p><strong>WhatsApp</strong> solicitará um <strong>endereço de email opcional</strong>.</p>
+            <p>Esse <strong>email</strong> pode ser usado para redefinir seu <strong>código de acesso</strong> caso você o esqueça.</p>
+            <p>Você pode <strong>adicionar um email</strong> ou <strong>pular</strong> essa etapa, </p>
+            <p>mas é <strong>altamente recomendado</strong> para <strong>maior segurança</strong>.</p>
+            </br></br>
+            <h2>Conclusão</h2>
+            <p>Após a <strong>confirmação</strong> do <strong>código de acesso</strong> e a adição do <strong>email</strong> (se aplicável),</p> 
+            <p>a verificação em duas etapas estará ativada.</p>
+        
+        
+            </div>
+    
+
+
+        </br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+    
+           
+            
+    
+    </section>
+        
+        
+        
+    
+    <section id="contato">
+        <h2>Guia de Segurança Para o Facebook</h2>
+    </br></br></br>
+        <img src="proteja-se!facebook.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>Veja como é fácil configurar a autenticação de dois</br></br>fatores no Facebook.
+            Para ativar ou gerenciar a </br></br>autenticação de dois fatores, você deve:
+        </h2>
+    </br></br></br></br></br>
+        <h2>1º Passo</h2>
+    </br></br>
+        <p>Clicar na seta para baixo no canto superior direito do Facebook e ir em Configurações.</p>
+    </br></br></br>
+        <img src="imagemfacebook1.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>2º Passo</h2>
+    </br></br>
+        <p>Segurança e login, para acessar as Configurações de segurança e login da sua conta.</p>
+    </br></br></br>
+        <img src="imagemfacebook2.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>3º Passo</h2>
+    </br></br>
+        <p>Rolar a tela para baixo até Usar autenticação de dois fatores e clicar em Editar.</p>
+    </br></br></br>
+        <img src="imagemfacebook3.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>4º Passo</h2>
+    </br></br>
+        <p>Clicar em Ativar depois de ter selecionado e configurado um método de autenticação.</p>
+    </br></br></br>
+        <h2>5º Passo: Você pode escolher entre dois métodos de autenticação de dois fatores</br></br> para usar quando entrar em sua conta do Facebook usando um computador</br></br>
+             ou dispositivo móvel não reconhecido:
+        </h2>
+    </br></br>
+        <p id="p0001">- Códigos de SMS no seu celular</p></br></br>
+
+        <p id="p0002">- Códigos de login de um aplicativo de autenticação de terceiros.
+            </p>
+
+    </br></br></br>
+        <img src="imagemfacebook4.jpg" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>É necessário configurar pelo menos uma dessas opções para</br></br>
+             usar a autenticação de dois fatores e garantir mais segurança</br></br>
+             aos seus acessos.
+        </h2>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <section id="sobre">
+
+        <h2>Guia de Segurança Para o Instagram</h2>
+    </br></br></br>
+        <img src="proteja-se!instagram.gif" id="proteja-se" alt="Uma bela imagem" width="600" height="400">
+    </br></br></br>
+        <h2>1º Passo Abra o Instagram:</h2>
+    </br></br></br>
+        <p>Vá para o seu perfil e toque no menu de três linhas no canto superior direito</p>
+    </br></br></br>
+        <img src="imageminstagram1.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>2º Passo Acesse as Configurações e atividades:</h2>
+    </br></br></br>
+        <p> Toque em <strong>configuração e atividades</strong>. </br></br>Em seguida, toque em <strong>"Central de Contas"</strong>. </p>
+    </br></br></br>
+        <img src="imageminstagram2.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>3º Passo Vá para <strong>Senha e segurança</strong>:</h2>
+    </br></br></br>
+        <p>Dentro da <strong>Central de Contas</strong> vá para <strong> Senha e segurança</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram3.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>4º Passo Ativar a <strong>Autenticação de Dois Fatores</strong></h2>
+    </br></br></br>
+        <p>Toque em <strong>Autenticação de Dois Fatores</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram4.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        
+        <h2>5º Passo Escolher o Método de Autenticação</h2>
+    </br></br></br>
+        <p>Você verá opções para ativar a autenticação de dois fatores</br></br>
+         por <strong>SMS</strong> e <strong>Aplicativo de Autenticação</strong>. Escolha <strong>"SMS"</strong>.</p>
+    </br></br></br>
+        <img src="imageminstagram5.jpg" id="proteja-se"alt="segundo passo" width="600" height="400">
+    </br></br></br>
+        <h2>6º Passo Inserir o Número de Telefone</h2>
+    </br></br></br>
+        <p>Digite o número de telefone associado à sua conta do Instagram e toque em <strong>"Avançar"</strong>.</p>
+    </br></br></br>
+        <h2>7º Passo Confirmar o Código</h2>
+    </br></br></br>
+        <p>Você receberá um código por SMS. Digite esse código no Instagram para</br></br>confirmar a ativação da autenticação de dois fatores.</p>
+    </br></br></br>
+        <h2>8º Passo Salvar os Códigos de Reserva</h2>
+    </br></br></br>
+        <p>O Instagram fornecerá alguns códigos de reserva. Guarde esses códigos em um lugar seguro.</br></br>Eles podem ser usados para acessar sua conta caso você perca acesso ao seu telefone.</p>
+    </br></br></br>
+    </br></br></br>
+
+
+        <h2><strong>Dicas Extras</strong></h2>
+    </br></br></br>
+        <p> <strong>1.Não clique em links suspeitos ou des conhecidos</strong>
+    </br></br>
+        <strong>2.Não baixe arquivos de fontes desconhecidas</strong>
+    </br></br>
+        <strong>3.Verifique a autenticidade de mensagens e comentários</strong></p>
+
+
+
+
+
+
+   </section>
+
+    <script>
+        function mostrarSecao(id) {
+            // Esconde todas as seções e remove a classe 'active'
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                secao.style.display = 'none';
+                secao.classList.remove('active');
+                });
+
+            // Mostra a seção selecionada e adiciona a classe 'active'
+            const secaoAtiva = document.getElementById(id);
+            secaoAtiva.style.display = 'block';
+            secaoAtiva.classList.add('active');
+                }
+    
+        
+
+                
+    </script>
+
+
+
+    <footer>
+        <p id="prodapé">&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+        <a href="https://www.termsfeed.com/blog/sample-terms-service-template/" style="color: white;" target="_blank">Termos de Serviço</a> | 
+        <a href="https://www.termsfeed.com/blog/sample-privacy-policy-template/" style="color: white;" target="_blank">Política de Privacidade</a>
+
+
+
+
+
+
+
+
+
+
+
+
+    </footer>
+</body>
+</html>
